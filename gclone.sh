@@ -14,7 +14,6 @@ if [[ $(id -u) -ne 0 ]]; then
     exit 1
 fi
 
-HOSTIP=$(ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p')
 CLDBIN=/usr/bin/gclone
 OSARCH=$(uname -m)
 case $OSARCH in 
